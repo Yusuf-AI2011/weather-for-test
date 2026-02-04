@@ -18,7 +18,6 @@ export default App;
 
 let api =
   "https://api.openweathermap.org/data/2.5/weather?q=tashkent&units=metric&appid=159bfbb23a088d7cc56ca707df61f44c";
-const search = document.querySelector(".search");
 
 async function getData(url) {
   const search = document.querySelector(".search");
@@ -49,7 +48,7 @@ function getFunction(data) {
 
 function searchFunction(e) {
   const value = e.target.value;
-  if (e.key == "Enter") {
+  if (e.key === "Enter") {
     getData(
       `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=159bfbb23a088d7cc56ca707df61f44c`,
     );
